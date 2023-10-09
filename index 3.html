@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <link rel="javas" href="">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">  <script>
+  jQuery(document).ready(function() {
+    function count($this){
+      var current = parseInt($this.html(), 10);
+      current = current + 1; /* Where 1 is increment */
+  
+      $this.html(++current);
+      if(current > $this.data('count')){
+        $this.html($this.data('count'));
+      } else {
+        setTimeout(function(){count($this)}, 50);
+      }
+    }
+  
+    jQuery(".stat-count").each(function() {
+      jQuery(this).data('count', parseInt(jQuery(this).html(), 10));
+      jQuery(this).html('0');
+      count(jQuery(this));
+    });
+  });</script>
+  <title>RECTA</title>
+  <link rel="stylesheet" href="estilos.css">
+  <meta charset="UTF-8">
+</head>
+<body class="bg-dark">
+
+  <nav class="navbar navbar-expand-lg bg-dark  navbar-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="./imagenes/Imagen1.png" id="nav-logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#introduccion">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#tribute-data">Teoría</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#ejercicios">Conclusión</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Ir a Series de Taylor</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Música
+            </a>
+            <ul class="dropdown-menu">
+              <!-- Content -->
+              <div class="container d-flex justify-content-center my-4 mb-5">
+                <div id="mobile-box">
+                  <!-- Card -->
+                  <div class="card">
+                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                      <img class="card-img-top" src="https://cdn-icons-png.flaticon.com/512/2108/2108423.png"
+                        alt="Card image cap">
+                      <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                      </a>
+                    </div>
+                    <div class="card-body text-center">
+
+                      <h5 class="h5 font-weight-bold"><a href="#" target="_blank">Piano Tenue</a></h5>
+                      <p class="mb-0">Música Rejalante</p>
+
+                      <audio id="music" preload="true">
+                        <source src="relajante1.mp3">controls
+                      </audio>
+                      <div id="audioplayer">
+                        <i id="pButton" class="fas fa-play"></i>
+                        <div id="timeline">
+                          <div id="playhead"></div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <!-- Card -->
+                </div>
+              </div>
+              <audio src="relajante1.mp3" controls></audio>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="stat">
+    <span class="stat-count">0</span>
+    <p style="position:flex;" class="stat-detail">Visitantes</p>
+</div>  
+
+  <main class="container mt-5">
+    <section class="container-fluid my-5 d-flex flex-column align-items-center" id="introduccion">
+      <h1 class="text-center my-5">LA RECTA</h1> 
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/spn4NdW9TTE?si=fx8gY0jFe9XEdb9C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>      <h2>Introducción.</h2>
+      
+      <p class="lead">Bienvenidos, la presente página web tiene como finalidad nada más que compartir los conocimientos adquiridos
+        sobre los temas de rectas y sus operaciones relativas a ellas, por el material facilitado por la institución y el
+        profesor. Se tratarán los conceptos de los temas mencionados y se verán también ejercicios resueltos para
+        facilitar su comprensión. Espero que se hayan satisfecho también en su totalidad los requerimientos académicos
+        impuestos para esta evaluación.</p>
+    </section>
+    <section id="tribute-data">
+      <h1 class="title-APJ">
+        Sobre la recta.
+      </h1>
+      <h2>¿Qué es la recta?</h2>
+      <p>La recta es una figura geométrica que se extiende infinitamente en ambas direcciones y está formada por un conjunto de puntos equidistantes de dos puntos fijos llamados puntos extremos. La ecuación de la recta es una expresión matemática que permite describir la posición de la recta en el plano cartesiano.      </p>
+
+<p>Existen diferentes formas de expresar la ecuación de la recta, dependiendo de la información que se tenga sobre ella. Algunas de las formas más comunes son:</p>
+<li>Forma punto-pendiente: esta forma se utiliza cuando se conoce el punto (x1, y1) por donde pasa la recta y su pendiente m. La ecuación de la recta es:
+</li>
+<p>y - y1 = m(x - x1)</p>
+<li> Forma pendiente-intercepto: esta forma se utiliza cuando se conoce la pendiente m y el punto donde la recta corta al eje y, llamado punto de intersección o intercepto b. La ecuación de la recta es:</li>
+<p>y = mx + b</p>
+<li>Forma general: esta forma se utiliza cuando no se tiene información específica sobre la recta. La ecuación de la recta es:</li>
+<p>Ax + By + C = 0</p>
+<p>donde A, B y C son constantes que determinan la posición de la recta.</p>
+<p>En resumen, la ecuación de la recta es una herramienta fundamental en geometría analítica que permite describir la posición de la recta en el plano cartesiano. Existen diferentes formas de expresarla, dependiendo de la información que se tenga sobre la recta.</p>
+     <h2 class="title-APJ">Operaciones con rectas
+    </h2>
+      <img id ="centrar" src="https://economipedia.com/wp-content/uploads/geometria-analitica.png" class="img-fluid my-5">
+      <br>
+      <p>Las rectas son una figura geométrica fundamental en geometría analítica y su estudio se enfoca en la descripción de su posición y comportamiento en el plano cartesiano. Una de las herramientas principales para lograr esto es la ecuación de la recta, que permite expresar matemáticamente su posición y características.</p>
+      <p>Pero además de la ecuación de la recta, existen diversas operaciones posibles con rectas que permiten obtener información adicional sobre su comportamiento y posición en el plano. A continuación, se describen algunas de estas operaciones:</p>
+   
+        <ol><li>Intersección de rectas: esta operación consiste en encontrar el punto donde dos rectas se cruzan en el plano. Para ello, se igualan las ecuaciones de ambas rectas y se resuelve el sistema de ecuaciones resultante. El resultado es un punto que pertenece a ambas rectas. </li> 
+        <img id="centrar2" src="https://www.problemasyecuaciones.com/geometria2D/interseccion/G1.png"> <br>
+
+        <li>Paralelismo de rectas: dos rectas son paralelas si tienen la misma pendiente. En este caso, sus ecuaciones tendrán la misma forma de la forma pendiente-intercepto (y = mx + b), pero con diferentes valores de b. Si se desea comprobar si dos rectas son paralelas, se puede calcular su pendiente y compararla.</li>
+        <img id="centrar2" src="https://www.superprof.es/diccionario/wp-content/uploads/2020/01/paralelismo-1.gif"> <br>
+        <li>Perpendicularidad de rectas: dos rectas son perpendiculares si su pendiente es el negativo recíproco. Es decir, si la pendiente de una recta es m, la pendiente de la otra recta será -1/m. Para comprobar si dos rectas son perpendiculares, se puede calcular su pendiente y aplicar esta regla.</li>
+        <img id="centrar2" src="https://www.fhybea.com/herramientas/imagenes_articulos/rectas-perpendiculares/rectas-perpendiculares.png"> <br>
+        <li>Distancia entre dos rectas: la distancia entre dos rectas se calcula como la distancia perpendicular entre ambas rectas. Para ello, se puede trazar una recta perpendicular a ambas rectas que pase por un punto de una de ellas. Luego, se calcula la distancia entre este punto y la otra recta.</li>
+        <img id="centrar2" src="data:image/jpeg;base64,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"> <br>
+        <li>Ángulo entre dos rectas: el ángulo entre dos rectas se calcula como el ángulo formado por sus pendientes. Para ello, se puede utilizar la fórmula del ángulo entre dos vectores, que en este caso corresponde a las pendientes de las rectas.</li>
+        <img style="width:40%; height:40%;"id="centrar2" src="https://www.neurochispas.com/wp-content/uploads/2022/07/Formula-para-el-angulo-entre-dos-rectas.png">
+    </ol>
+      </div>
+
+      <iframe id="centrar"src="https://www.slideshare.net/slideshow/embed_code/key/HtflukN3lXS4Ht?startSlide=1" width="597" height="486" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px;max-width: 100%;" allowfullscreen></iframe><div style="margin-bottom:5px"><strong><a href="https://es.slideshare.net/profluisgomez/expocicion-geometria-analitica-la-recta" title="Expocicion Geometria Analitica La Recta" target="_blank">Expocicion Geometria Analitica La Recta</a></strong> from <strong><a href="https://es.slideshare.net/profluisgomez" target="_blank">Luis Alfredo Gómez Rodríguez</a></strong></div>        Para más información, busque.  
+        <a id="tribute-link" href="https://es.wikipedia.org/wiki/Recta"> 
+          <b>Rectas</b>
+        </a>
+        en Wikipedia.
+      </p>
+    </section>
+    <section id="tribute-data"><h2 class="text-center my-5">Conclusión</h2><p>
+      En conclusión, las rectas son una figura geométrica fundamental en geometría analítica y su estudio es esencial para comprender la posición y comportamiento de los objetos en el plano cartesiano. La ecuación de la recta es una herramienta clave para describir matemáticamente su posición y características, pero además existen diversas operaciones posibles con rectas que permiten obtener información adicional sobre su comportamiento y posición en el plano. Con estas herramientas, es posible realizar cálculos precisos y obtener información útil sobre las rectas en el plano cartesiano, lo que resulta esencial en diversas áreas de la ciencia y la tecnología.</p></section>
+  </main>
+  <footer class="container-fluid d-flex justify-content-center mt-5 bg-dark pt-3">
+    <p> Hecho por @ <a href="#"> Andrés Osorio. C.I 30.919.870. Matemáticas III, en la sección S-02</a></p>
+   
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
